@@ -1,0 +1,148 @@
+header {
+    line-height: 70px;
+    position: fixed;
+    width: 100%;
+    align-items: center;
+    // background: rgba($color: #e0d0d0, $alpha: 0.4);
+    @include sp {
+        height: 100px;
+        // display: none;
+        
+    }
+    
+}
+                            ////ハンバーガーメニュー////
+.menuBotton {
+    @include sp {
+        display: block;
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.menuBotton div {
+    @include sp {
+        height: 1px;
+        width: 60%;
+        background: black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);  
+        transition: .3s;
+    }
+}
+
+.menuBotton div:nth-of-type(1) {
+    @include sp {
+        transform: translate(-50%, -10px);
+
+    }
+}
+
+.menuBotton div:nth-of-type(3) {
+    @include sp {
+
+        transform: translate(-50%, 10px);
+
+    }
+}
+
+.menuBotton.active div:nth-of-type(1) {
+    @include sp {
+        transform: rotate(45deg) translate(-50%, 0);
+        transform-origin: 0% 50%;
+
+    }
+}
+
+.menuBotton.active div:nth-of-type(2) {
+    @include sp {
+        opacity: 0;
+
+    }
+}
+
+.menuBotton.active div:nth-of-type(3) {
+    @include sp {
+        transform: rotate(-45deg) translate(-50%, 0);
+        transform-origin: 0% 50%;
+    }
+}
+
+
+                                ////ハンバーガーメニュー////
+
+.nav {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    @include sp {
+        display: none;
+        position: fixed;
+
+    }
+}
+.nav li {
+    font-size: 50px;
+    font-family: 'Impact',sans-serif;
+    display: inline-block;
+    padding-right: 20px;
+    color: white;
+    border-right:solid medium rgb(233, 181, 71) ;
+    margin-left: 10px;
+
+    &:hover {
+        color: rgb(231, 192, 107);
+        cursor : pointer;
+    }
+}
+
+.nav-a {
+    color: white;
+}
+
+.h-icons {
+    display: none;
+    @include sp {
+        display: block;
+        width: 50px;
+        height: 50px;
+
+    }
+}
+.insta-header {
+    display: none;
+    @include sp {
+        color: purple;
+        :hover {
+            color: rgb(231, 192, 107);
+            cursor : pointer;
+        }
+    }
+}
+.line-header {
+    display: none;
+    @include sp {
+        color: rgb(18, 175, 18);
+        :hover {
+            color: rgb(231, 192, 107);
+            cursor : pointer;
+        }
+
+    }
+}
+.insta-icon-header {
+    font-weight: 130;
+    font-size: 50px;
+    
+}
+.line-icon-header {
+    font-weight: 100;
+    font-size: 50px;
+}
+
+

@@ -1,0 +1,55 @@
+.v-mainn {
+    margin-bottom: 15em;
+}
+.v-main {
+    height: 400px;
+    width: 100%;
+}
+.main-wrap {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.main-fra {
+    font-size: 90px;
+    color: rgb(141, 59, 59);
+    text-align: center;
+    position: relative;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    &:hover {
+        color: rgb(231, 192, 107);
+        cursor : pointer;
+    }
+    @include sp {
+        top: 150px;
+        font-size: 70px;
+        
+    }
+}
+.v-spa {
+    letter-spacing: 25px;
+}
+
+
+
+
+#v-nav {
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+}
+
+#v-nav.active {
+    opacity: 1;
+    visibility: visible;
+    background: white;
+    height: 500px;
+    // position: fixed;
+}
+
+#v-nav.active li {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
